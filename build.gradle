@@ -15,7 +15,7 @@ repositories {
 }
 
 spinnakerBundle {
-  pluginId = "Armory.RandomWaitPlugin"
+  pluginId = "Armory.CustomStagePlugin"
   description = "An example of a PF4J-based plugin that provides a custom pipeline stage."
   provider = "https://github.com/spinnaker-plugin-examples"
   version = rootProject.version
@@ -24,10 +24,10 @@ spinnakerBundle {
 version = normalizedVersion()
 
 subprojects {
-  group = "io.armory.plugin.stage.wait.random"
+  group = "io.armory.plugin.stage.custom"
   version = rootProject.version
 
-  if (name != "random-wait-deck") {
+  if (name != "custom-stage-deck") {
     apply plugin: "com.diffplug.spotless"
     spotless {
       kotlin {

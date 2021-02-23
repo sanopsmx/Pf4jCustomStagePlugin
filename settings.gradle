@@ -6,9 +6,9 @@ pluginManagement {
   }
 }
 
-rootProject.name = "pf4jStagePlugin"
+rootProject.name = "pf4jCustomStagePlugin"
 
-include "random-wait-orca", "random-wait-deck"
+include "custom-stage-orca", "custom-stage-deck"
 
 def setBuildFile(project) {
   project.buildFileName = "${project.name}.gradle"
