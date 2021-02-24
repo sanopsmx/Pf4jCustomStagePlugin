@@ -9,6 +9,8 @@ import {
   HelpField,
   IExecutionDetailsSectionProps,
   IStage,
+  StageConfigField,
+  TextInput,
   IStageConfigProps,
   IStageTypeConfig,
   NumberInput,
@@ -27,50 +29,31 @@ import './CustomStage.less';
 export function CustomStageConfig(props: IStageConfigProps) {
   return (
     <div className="CustomStageConfig">
-      <FormikStageConfig
-        {...props}
-        validate={validate}
-        onChange={props.updateStage}
-        render={(props) => (
-          <FormikFormField
-            name="maxWaitTime"
-            label="Max Time To Wait"
-            help={<HelpField id="armory.customStage.maxWaitTime" />}
-            input={(props) => <NumberInput {...props} />}
+      <StageConfigField label="Remote vm details">
+        <TextInput
+           type="text"
+           className="form-control"
+           onChange={props.updateStage}
+           value="2"
+        />
+      </StageConfigField>
+      <StageConfigField label="Git account">
+        <TextInput
+          type="text"
+          className="form-control"
+          onChange={props.updateStage}
+          value="3"
+        />
+      </StageConfigField>
+      <StageConfigField label="Filename">
+        <TextInput
+          type="text"
+          className="form-control"
+          onChange={props.updateStage}
+          value="3"
           />
-        )}
-      />
+      </StageConfigField>
     </div>
-    <div className="CustomStageConfig">
-          <FormikStageConfig
-            {...props}
-            validate={validate}
-            onChange={props.updateStage}
-            render={(props) => (
-              <FormikFormField
-                name="maxWaitTime"
-                label="Max Time To Wait"
-                help={<HelpField id="armory.customStage.maxWaitTime" />}
-                input={(props) => <NumberInput {...props} />}
-              />
-            )}
-          />
-        </div>
-        <div className="CustomStageConfig">
-              <FormikStageConfig
-                {...props}
-                validate={validate}
-                onChange={props.updateStage}
-                render={(props) => (
-                  <FormikFormField
-                    name="maxWaitTime"
-                    label="Max Time To Wait"
-                    help={<HelpField id="armory.customStage.maxWaitTime" />}
-                    input={(props) => <NumberInput {...props} />}
-                  />
-                )}
-              />
-            </div>
   );
 }
 
