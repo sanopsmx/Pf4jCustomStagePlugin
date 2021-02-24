@@ -19,7 +19,7 @@ import { CustomStageConfig, validate } from './CustomStageConfig';
 export const customStage: IStageTypeConfig = {
   key: 'customStage',
   label: `Custom Stage`,
-  description: 'Stage that waits a random amount of time up to the max input',
+  description: 'Stage that executes the script from the git artifact on the remote vm.',
   component: CustomStageConfig, // stage config
   executionDetailsSections: [CustomStageExecutionDetails, ExecutionDetailsTasks],
   validateFn: validate,

@@ -9,7 +9,6 @@ import {
   HelpField,
   IExecutionDetailsSectionProps,
   IStage,
-  StageConfigField,
   TextInput,
   IStageConfigProps,
   IStageTypeConfig,
@@ -29,30 +28,33 @@ import './CustomStage.less';
 export function CustomStageConfig(props: IStageConfigProps) {
   return (
     <div className="CustomStageConfig">
-      <StageConfigField label="Remote vm details">
-        <TextInput
-           type="text"
-           className="form-control"
-           onChange={props.updateStage}
-           value="2"
-        />
-      </StageConfigField>
-      <StageConfigField label="Git account">
-        <TextInput
-          type="text"
-          className="form-control"
-          onChange={props.updateStage}
-          value="3"
-        />
-      </StageConfigField>
-      <StageConfigField label="Filename">
-        <TextInput
-          type="text"
-          className="form-control"
-          onChange={props.updateStage}
-          value="3"
+      <FormikStageConfig
+        {...props}
+        validate={validate}
+        onChange={props.updateStage}
+        render={(props) => (
+        <div className="form-horizontal">
+          <FormikFormField
+            name="vmDetails"
+            label="VM Details"
+            help={<HelpField id="opsmx.customStage.vmDetails" />}
+            input={(props) => <TextInput {...props} />}
           />
-      </StageConfigField>
+          <FormikFormField
+            name="gitAccount"
+            label="Git Account Artifact"
+            help={<HelpField id="opsmx.customStage.gitAccount" />}
+            input={(props) => <TextInput {...props} />}
+          />
+          <FormikFormField
+            name="filename"
+            label="Filename"
+            help={<HelpField id="opsmx.customStage.filename" />}
+            input={(props) => <TextInput {...props} />}
+          />
+        </div>
+        )}
+      />
     </div>
   );
 }

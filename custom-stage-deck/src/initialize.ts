@@ -12,5 +12,7 @@ import { HelpContentsRegistry } from '@spinnaker/core';
   These registries and their methods may change without warning.
 */
 export const initialize = () => {
-  HelpContentsRegistry.register('armory.customStage.maxWaitTime', 'The maximum time, in seconds, that this stage should wait before continuing.');
+  HelpContentsRegistry.register('opsmx.customStage.vmDetails', 'Details of the remote server where script needs to be executed.');
+  HelpContentsRegistry.register('opsmx.customStage.gitAccount', 'Git account details from where artifact can be fetched.');
+  HelpContentsRegistry.register('opsmx.customStage.filename', 'Scripts of this filename to be executed on the vm');
 };
