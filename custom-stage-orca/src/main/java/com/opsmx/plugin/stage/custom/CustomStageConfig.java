@@ -5,39 +5,41 @@ import com.netflix.spinnaker.kork.plugins.api.PluginConfiguration;
 @PluginConfiguration
 public class CustomStageConfig {
 
-    public String getVmDetails() {
-        return vmDetails;
+    public String getDefaultVmDetails() {
+        return defaultVmDetails;
     }
 
-    public void setVmDetails(String vmDetails) {
-        this.vmDetails = vmDetails;
+    public void setDefaultVmDetails(String defaultVmDetails) {
+        this.defaultVmDetails = defaultVmDetails;
     }
 
-    public String getFilename() {
-        return filename;
+    public String getDefaultFilename() {
+        return defaultFilename;
     }
 
-    public void setFilename(String filename) {
-        this.filename = filename;
+    public void setDefaultFilename(String defaultFilename) {
+        this.defaultFilename = defaultFilename;
     }
 
-    public String getGitAccount() {
-        return gitAccount;
+    public String getDefaultGitAccount() {
+        return defaultGitAccount;
     }
 
-    public void setGitAccount(String gitAccount) {
-        this.gitAccount = gitAccount;
+    public void setDefaultGitAccount(String defaultGitAccount) {
+        this.defaultGitAccount = defaultGitAccount;
     }
 
-    private String vmDetails;
+    private String defaultVmDetails;
 
-    private String filename;
+    private String defaultFilename;
 
-    private String gitAccount;
+    private String defaultGitAccount;
+
+    public CustomStageConfig(){}
 
     public CustomStageConfig(String vmDetails, String filename, String gitAccount) {
-        this.vmDetails = vmDetails;
-        this.filename = filename;
-        this.gitAccount = gitAccount;
+        this.defaultVmDetails = vmDetails;
+        this.defaultFilename = filename;
+        this.defaultGitAccount = gitAccount;
     }
 }

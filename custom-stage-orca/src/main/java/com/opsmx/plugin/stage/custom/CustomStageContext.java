@@ -32,6 +32,8 @@ public class CustomStageContext {
 
     private String gitAccount;
 
+    public CustomStageContext(){}
+
     public CustomStageContext(String vmDetails, String filename, String gitAccount) {
         this.vmDetails = vmDetails;
         this.filename = filename;
