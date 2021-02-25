@@ -24,7 +24,7 @@ spinnakerBundle {
 version = normalizedVersion()
 
 subprojects {
-  group = "io.armory.plugin.stage.custom"
+  group = "com.opsmx.plugin.stage.custom"
   version = rootProject.version
 
   if (name != "custom-stage-deck") {
