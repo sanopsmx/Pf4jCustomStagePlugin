@@ -13,6 +13,5 @@ import { HelpContentsRegistry } from '@spinnaker/core';
 */
 export const initialize = () => {
   HelpContentsRegistry.register('opsmx.customStage.vmDetails', 'Details of the remote server where script needs to be executed.');
-  HelpContentsRegistry.register('opsmx.customStage.gitAccount', 'Git account details from where artifact can be fetched.');
-  HelpContentsRegistry.register('opsmx.customStage.filename', 'Scripts of this filename to be executed on the vm');
+  HelpContentsRegistry.register('opsmx.customStage.payload', 'Github payload details from where artifact can be fetched.');
 };

@@ -1,6 +1,5 @@
 package com.opsmx.plugin.stage.custom;
 
-import com.netflix.spinnaker.kork.plugins.api.PluginComponent;
 import com.netflix.spinnaker.orca.api.pipeline.graph.StageDefinitionBuilder;
 import com.netflix.spinnaker.orca.api.pipeline.graph.TaskNode;
 import com.netflix.spinnaker.orca.api.pipeline.models.StageExecution;
@@ -8,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 import org.pf4j.Extension;
 
 @Extension
-@PluginComponent
+@StageDefinitionBuilder.Aliases("customStage")
 public class CustomStage implements StageDefinitionBuilder {
 
     /**

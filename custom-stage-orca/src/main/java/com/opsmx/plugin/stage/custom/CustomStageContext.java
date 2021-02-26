@@ -18,25 +18,25 @@ public class CustomStageContext {
         this.filename = filename;
     }
 
-    public String getGitAccount() {
-        return gitAccount;
-    }
-
-    public void setGitAccount(String gitAccount) {
-        this.gitAccount = gitAccount;
-    }
-
     private String vmDetails;
 
     private String filename;
 
-    private String gitAccount;
+    public String getPayload() {
+        return payload;
+    }
+
+    public void setPayload(String payload) {
+        this.payload = payload;
+    }
+
+    private String payload;
 
     public CustomStageContext(){}
 
-    public CustomStageContext(String vmDetails, String filename, String gitAccount) {
+    public CustomStageContext(String vmDetails, String filename, String payload) {
         this.vmDetails = vmDetails;
         this.filename = filename;
-        this.gitAccount = gitAccount;
+        this.payload = payload;
     }
 }

@@ -39,7 +39,12 @@ dependencies {
   compileOnly "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
   compileOnly "com.netflix.spinnaker.kork:kork-plugins-api:${korkVersion}"
   compileOnly "com.netflix.spinnaker.orca:orca-api:${orcaVersion}"
+  compileOnly "com.netflix.spinnaker.orca:orca-clouddriver:${orcaVersion}"
   kapt "org.pf4j:pf4j:${pf4jVersion}"
+
+  compileOnly group: 'com.squareup.retrofit', name: 'retrofit', version: '1.9.0'
+  compileOnly group: 'com.squareup.retrofit', name: 'converter-jackson', version: '1.9.0'
+  compileOnly group: 'com.jakewharton.retrofit', name: 'retrofit1-okhttp3-client', version: '1.1.0'
 
   testImplementation(platform("com.netflix.spinnaker.orca:orca-bom:${orcaVersion}"))
   testImplementation "com.netflix.spinnaker.orca:orca-api"

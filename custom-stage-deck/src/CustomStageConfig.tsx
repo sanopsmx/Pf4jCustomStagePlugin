@@ -41,16 +41,10 @@ export function CustomStageConfig(props: IStageConfigProps) {
             input={(props) => <TextInput {...props} />}
           />
           <FormikFormField
-            name="gitAccount"
-            label="Git Account Artifact"
-            help={<HelpField id="opsmx.customStage.gitAccount" />}
-            input={(props) => <TextInput {...props} />}
-          />
-          <FormikFormField
-            name="filename"
-            label="Filename"
-            help={<HelpField id="opsmx.customStage.filename" />}
-            input={(props) => <TextInput {...props} />}
+            name="payload"
+            label="Github Account Artifact Payload"
+            help={<HelpField id="opsmx.customStage.payload" />}
+            input={(props) => <textarea className="form-control code" placeholder=" Github payload "  rows={5} {...props} />}
           />
         </div>
         )}
