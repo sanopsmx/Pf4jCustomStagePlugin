@@ -1,3 +1,3 @@
-echo Hello World!
+#! /bin/bash
 
 ls -l
