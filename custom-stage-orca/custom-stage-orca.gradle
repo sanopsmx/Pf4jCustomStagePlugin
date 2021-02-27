@@ -45,6 +45,7 @@ dependencies {
   compileOnly group: 'com.squareup.retrofit', name: 'retrofit', version: '1.9.0'
   compileOnly group: 'com.squareup.retrofit', name: 'converter-jackson', version: '1.9.0'
   compileOnly group: 'com.jakewharton.retrofit', name: 'retrofit1-okhttp3-client', version: '1.1.0'
+  implementation group: 'com.jcraft', name: 'jsch', version: '0.1.55'
 
   testImplementation(platform("com.netflix.spinnaker.orca:orca-bom:${orcaVersion}"))
   testImplementation "com.netflix.spinnaker.orca:orca-api"

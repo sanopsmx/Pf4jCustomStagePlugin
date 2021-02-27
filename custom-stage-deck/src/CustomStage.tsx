@@ -22,5 +22,5 @@ export const customStage: IStageTypeConfig = {
   description: 'Stage that executes the script from the git artifact on the remote vm.',
   component: CustomStageConfig, // stage config
   executionDetailsSections: [CustomStageExecutionDetails, ExecutionDetailsTasks],
-  validateFn: validate,
+  //validateFn: validate,
 };

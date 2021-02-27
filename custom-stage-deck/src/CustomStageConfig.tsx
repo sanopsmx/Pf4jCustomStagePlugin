@@ -30,7 +30,6 @@ export function CustomStageConfig(props: IStageConfigProps) {
     <div className="CustomStageConfig">
       <FormikStageConfig
         {...props}
-        validate={validate}
         onChange={props.updateStage}
         render={(props) => (
         <div className="form-horizontal">
@@ -38,13 +37,13 @@ export function CustomStageConfig(props: IStageConfigProps) {
             name="vmDetails"
             label="VM Details"
             help={<HelpField id="opsmx.customStage.vmDetails" />}
-            input={(props) => <TextInput {...props} />}
+            input={(props) => <textarea className="form-control code" placeholder=" Vm details payload " rows={5} {...props} />}
           />
           <FormikFormField
             name="payload"
             label="Github Account Artifact Payload"
             help={<HelpField id="opsmx.customStage.payload" />}
-            input={(props) => <textarea className="form-control code" placeholder=" Github payload "  rows={5} {...props} />}
+            input={(props) => <textarea className="form-control code" placeholder=" Github payload " rows={5} {...props} />}
           />
         </div>
         )}

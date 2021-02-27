@@ -17,7 +17,8 @@ export function CustomStageExecutionDetails(props: IExecutionDetailsSectionProps
   return (
     <ExecutionDetailsSection name={props.name} current={props.current}>
       <div>
-        <p>Waited {props.stage.outputs.timeToWait} second(s)</p>
+        <p>Command {props.stage.outputs.command} executed on the remote VM server : {props.stage.outputs.vmServer} </p>
+        <p>  {props.stage.outputs.result} </p>
       </div>
     </ExecutionDetailsSection>
   );
